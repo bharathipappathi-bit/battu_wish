@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+margin:0;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+
+}
+
+.container{
+
+position:relative;
+z-index:10;
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+font-size:80px;
+margin-bottom:20px;
+
+animation:glow 2s infinite;
+
+}
+
+h2{
+
+font-size:35px;
+margin-bottom:30px;
+
+}
+
+#fireworks{
+
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+
+}
+
+.firework{
+
+position:absolute;
+font-size:35px;
+
+animation:explode 2s linear forwards;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:translateY(0) scale(.3);
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-300px) scale(2.2);
+opacity:0;
+
+}
+
+}
+
+@keyframes glow{
+
+0%{
+
+text-shadow:0 0 10px #fff;
+
+}
+
+50%{
+
+text-shadow:0 0 30px #ffd700;
+
+}
+
+100%{
+
+text-shadow:0 0 10px #fff;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="fireworks"></div>
+
+<div class="container">
+
+<h1>
+
+🎉 Happy Birthday My Love ❤️
+
+</h1>
+
+<h2>
+
+May your life always be filled with happiness, success and endless smiles. 💖
+
+</h2>
+
+<p>
+
+A little celebration before your final surprise... ✨
+
+</p>
+
+<br>
+
+<a href="surprise.html">
+
+<button class="startBtn">
+
+🎁 Open Final Surprise
+
+</button>
+
+</a>
+
+</div>
+
+<script>
+
+const emojis=["🎆","✨","🎇","💖","❤️","🎉","💥"];
+
+function createFirework(){
+
+const fw=document.createElement("div");
+
+fw.className="firework";
+
+fw.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+fw.style.left=Math.random()*100+"vw";
+
+fw.style.top=(70+Math.random()*30)+"vh";
+
+fw.style.fontSize=(25+Math.random()*35)+"px";
+
+document.getElementById("fireworks").appendChild(fw);
+
+setTimeout(()=>{
+
+fw.remove();
+
+},2000);
+
+}
+
+setInterval(createFirework,180);
+
+</script>
+
+</body>
+
+</html>

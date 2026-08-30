@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Birthday Surprise 🎁</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+
+            overflow:hidden;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            text-align:center;
+
+        }
+
+        .container{
+
+            max-width:800px;
+
+        }
+
+        h1{
+
+            font-family:'Great Vibes',cursive;
+            font-size:65px;
+            margin-bottom:15px;
+
+        }
+
+        p{
+
+            font-size:20px;
+            margin-bottom:30px;
+
+        }
+
+        .gift{
+
+            font-size:180px;
+
+            cursor:pointer;
+
+            transition:.5s;
+
+            user-select:none;
+
+        }
+
+        .gift:hover{
+
+            transform:scale(1.1) rotate(-5deg);
+
+        }
+
+        .surprise{
+
+            display:none;
+
+            margin-top:30px;
+
+            animation:fadeIn 1s;
+
+        }
+
+        .surprise h2{
+
+            font-size:45px;
+
+            margin-bottom:20px;
+
+        }
+
+        .reward{
+
+            background:rgba(255,255,255,.15);
+
+            border-radius:20px;
+
+            padding:30px;
+
+            line-height:2;
+
+            font-size:22px;
+
+            margin:30px auto;
+
+            max-width:600px;
+
+        }
+
+        .next-btn{
+
+            margin-top:30px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="hearts">
+
+<span>❤️</span>
+<span>💕</span>
+<span>💖</span>
+<span>💝</span>
+<span>💗</span>
+
+</div>
+
+<div class="container">
+
+<h1>
+
+A Special Gift For You 🎁
+
+</h1>
+
+<p>
+
+Click the gift box to open your birthday surprise ❤️
+
+</p>
+
+<div class="gift" id="gift">
+
+🎁
+
+</div>
+
+<div class="surprise" id="surprise">
+
+<h2>
+
+🎉 Surprise! 🎉
+
+</h2>
+
+<div class="reward">
+
+💖 Congratulations Battu 💖
+
+
+
+<h1>Unlimited Hugs 🤗</h1>
+
+❤️ Unlimited Kisses 😘
+
+<br>
+
+🍫 Chocolate Date
+
+<br>
+
+🚗 Long Drive
+
+<br>
+
+🍿 Movie Night
+
+<br>
+
+🍽 Romantic Dinner
+
+<br><br>
+
+And the biggest gift...
+
+<h2>
+
+For my Battu ❤️
+
+</h2>
+
+</div>
+
+<div class="next-btn">
+
+<a href="wheel.html">
+
+<button class="startBtn">
+
+🎡 Spin the Love Wheel →
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+<script>
+
+const gift=document.getElementById("gift");
+
+const surprise=document.getElementById("surprise");
+
+gift.onclick=function(){
+
+    gift.innerHTML="🎊";
+
+    gift.style.transform="scale(1.3)";
+
+    setTimeout(()=>{
+
+        gift.style.display="none";
+
+        surprise.style.display="block";
+
+    },700);
+
+}
+
+</script>
+
+</body>
+
+</html>

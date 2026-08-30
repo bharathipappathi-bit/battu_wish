@@ -1,0 +1,398 @@
+/* ===================================
+   Fade In Animation
+=================================== */
+
+.container{
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ===================================
+   Glowing Title
+=================================== */
+
+.title{
+
+    animation:titleGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes titleGlow{
+
+    0%{
+
+        text-shadow:
+        0 0 10px white,
+        0 0 20px pink,
+        0 0 30px deeppink;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 25px white,
+        0 0 40px hotpink,
+        0 0 60px red;
+
+    }
+
+    100%{
+
+        text-shadow:
+        0 0 10px white,
+        0 0 20px pink,
+        0 0 30px deeppink;
+
+    }
+
+}
+
+
+/* ===================================
+   Floating Cake
+=================================== */
+
+.cake{
+
+    animation:cakeFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes cakeFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===================================
+   Top Text
+=================================== */
+
+.top-text{
+
+    animation:slideTop 1.5s ease;
+
+}
+
+@keyframes slideTop{
+
+    from{
+
+        transform:translateY(-50px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ===================================
+   Subtitle
+=================================== */
+
+.subtitle{
+
+    animation:fadeText 3s ease;
+
+}
+
+@keyframes fadeText{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ===================================
+   Quote Animation
+=================================== */
+
+.quote{
+
+    animation:quoteGlow 4s infinite;
+
+}
+
+@keyframes quoteGlow{
+
+    0%{
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        opacity:.8;
+
+    }
+
+}
+
+
+/* ===================================
+   Buttons
+=================================== */
+
+button{
+
+    animation:buttonAppear 2.5s ease;
+
+}
+
+@keyframes buttonAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+button:hover{
+
+    animation:pulse .7s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ===================================
+   Footer
+=================================== */
+
+footer{
+
+    animation:footerFade 4s ease;
+
+}
+
+@keyframes footerFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ===================================
+   Twinkling Stars
+=================================== */
+
+.stars{
+
+    animation:twinkle 5s linear infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+    }
+
+}
+
+
+/* ===================================
+   Floating Hearts
+=================================== */
+
+.hearts span{
+
+    animation-name:heartFloat;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) scale(.8) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:translateY(-50vh) scale(1.1) rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.5) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ===================================
+   Continuous Heartbeat
+=================================== */
+
+.title::after{
+
+    content:" ❤️";
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.3);
+
+    }
+
+    50%{
+
+        transform:scale(1);
+
+    }
+
+    75%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome My Love ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="music/birthday.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💝</span>
+        <span>💗</span>
+        <span>❤️</span>
+        <span>💖</span>
+
+    </div>
+
+    <div class="stars"></div>
+
+    <div class="container">
+
+        <h3 class="top-text">
+            ❤️ For My Handsome Battu ❤️
+        </h3>
+
+        <h1 class="title">
+            I'm So Happy You're in my life
+        </h1>
+
+        <div class="cake">
+            💌
+        </div>
+
+        <p id="typingText" class="subtitle"></p>
+
+        <div class="quote">
+
+            Every moment with you is my favorite memory.<br><br>
+
+            Even though thousands of miles separate us,<br>
+
+            my heart celebrates your birthday right beside you. ❤️
+
+        </div>
+
+        <br>
+
+        <button id="continueBtn" class="startBtn">
+
+            Continue Our Journey ➜
+
+        </button>
+
+    </div>
+
+    <footer>
+
+        Made With Endless Love ❤️
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <script>
+
+        // Typing Effect
+
+        const message = "Dear Love... ❤️\n\nToday is not just another day.\nToday is the birthday of the most precious person in my life.\n\nSo I created this little world just for you.\nI hope every page makes you smile. 😊";
+
+        let i = 0;
+
+        function typeText() {
+
+            if (i < message.length) {
+
+                document.getElementById("typingText").innerHTML += message.charAt(i).replace(/\n/g, "<br>");
+
+                i++;
+
+                setTimeout(typeText, 45);
+
+            }
+
+        }
+
+        typeText();
+
+        // Continue Button
+
+        document.getElementById("continueBtn").onclick = function () {
+
+            window.location.href = "story.html";
+
+        };
+
+    </script>
+
+</body>
+
+</html>

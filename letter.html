@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Love Letter ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+
+            overflow-y:auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:30px;
+
+        }
+
+        .letter-container{
+
+            width:90%;
+            max-width:900px;
+            text-align:center;
+
+        }
+
+        .envelope{
+
+            font-size:140px;
+            cursor:pointer;
+            transition:.5s;
+
+        }
+
+        .envelope:hover{
+
+            transform:scale(1.1) rotate(-5deg);
+
+        }
+
+        .letter{
+
+            display:none;
+
+            margin-top:30px;
+
+            background:rgba(255,255,255,.12);
+
+            backdrop-filter:blur(15px);
+
+            border-radius:20px;
+
+            padding:40px;
+
+            text-align:left;
+
+            line-height:2;
+
+            font-size:20px;
+
+            border:1px solid rgba(255,255,255,.2);
+
+        }
+
+        .letter h1{
+
+            text-align:center;
+
+            font-family:'Great Vibes',cursive;
+
+            font-size:60px;
+
+            margin-bottom:30px;
+
+        }
+
+        #typing{
+
+            white-space:pre-line;
+
+        }
+
+        .next{
+
+            text-align:center;
+
+            margin-top:40px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="hearts">
+
+<span>❤️</span>
+<span>💕</span>
+<span>💖</span>
+<span>💗</span>
+<span>💝</span>
+
+</div>
+
+<div class="letter-container">
+
+<h2>
+
+💌 A Special Letter Just For You 💌
+
+</h2>
+
+<div class="envelope" id="envelope">
+
+📩
+
+</div>
+
+<button class="startBtn" onclick="openLetter()">
+
+Open My Letter ❤️
+
+</button>
+
+<div class="letter" id="letter">
+
+<h1>
+
+To My Battu ❤️
+
+</h1>
+
+<p id="typing"></p>
+
+<div class="next">
+
+<a href="scratch.html">
+
+<button class="startBtn">
+
+❤️Small gift for you
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const message = `My Battu ❤️,
+
+என் வாழ்க்கையில் வந்த முதல் ஒளி நீ…
+
+அந்த ஒளி என்னை விட்டு போனால்,
+என் வாழ்க்கையே நரகமாகிவிடும்.
+
+உன் கண்களால் என்னிடம் பேசினாய்,
+உன் வார்த்தையால் என்னை மகிழ வைத்தாய்.
+
+உன்னோடு இருக்கும் ஒவ்வொரு நொடியும்,
+என் வீட்டில் இருப்பது போன்ற ஓர் உணர்வு…
+
+உன்னோடு தான் என் வாழ்க்கை,
+உன்னோடு தான் என் பயணம்.
+
+என் வாழ்நாள் முழுவதும்
+உன்னோடு சேர்ந்து வாழ வேண்டும்…
+உன்னோடு சேர்ந்து
+என் வாழ்க்கையைப் பார்க்க வேண்டும்.
+
+நீ என் வாழ்க்கையில் வந்த ஒளி மட்டுமல்ல…
+என் வாழ்க்கையே நீ தான். ❤️
+
+என் அன்பே,
+உனக்கு இனிய பிறந்தநாள் வாழ்த்துகள்! 🎂❤️
+
+இன்று மட்டும் அல்ல…
+உன் வாழ்நாள் முழுவதும்
+நீ சந்தோஷமாக இருக்க வேண்டும்.
+அந்த சந்தோஷத்தில்
+என் காதலும் எப்போதும் இருக்க வேண்டும். ❤️
+
+Happy Birthday, என் உயிரே!
+என்றும் உன்னை நேசிப்பேன். ❤️
+
+Battu
+
+Thank you for loving me, supporting me, and standing beside me through every happiness and every challenge.
+
+You are not only my husband...
+
+You are my best friend,
+my biggest strength,
+my greatest blessing,
+and my forever home.
+
+I love you more than words can ever describe.
+
+Happy Birthday once again, My Love.
+
+Forever Yours ❤️`;
+
+let index = 0;
+
+function openLetter(){
+
+    // Hide envelope and button
+    document.getElementById("envelope").style.display = "none";
+    document.querySelector("button").style.display = "none";
+
+    // Show letter
+    document.getElementById("letter").style.display = "block";
+
+    // Start typing
+    typeLetter();
+}
+
+function typeLetter(){
+
+    if(index < message.length){
+
+        document.getElementById("typing").innerHTML += message.charAt(index);
+
+        index++;
+
+        setTimeout(typeLetter, 35);
+    }
+}
+
+</script>
+
+</body>
+
+</html>

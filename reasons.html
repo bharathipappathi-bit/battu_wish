@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Some Reasons Why I Love You ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            overflow-y:auto;
+            padding:40px 20px;
+        }
+
+        .page-title{
+
+            text-align:center;
+            font-family:'Great Vibes',cursive;
+            font-size:70px;
+            margin-bottom:15px;
+
+        }
+
+        .subtitle{
+
+            text-align:center;
+            margin-bottom:40px;
+
+        }
+
+        .cards{
+
+            max-width:1200px;
+            margin:auto;
+
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+
+        }
+
+        .card{
+
+            background:rgba(255,255,255,.12);
+
+            backdrop-filter:blur(15px);
+
+            border-radius:20px;
+
+            padding:30px;
+
+            text-align:center;
+
+            cursor:pointer;
+
+            transition:.4s;
+
+            border:1px solid rgba(255,255,255,.2);
+
+            min-height:220px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-10px) scale(1.03);
+
+        }
+
+        .number{
+
+            font-size:40px;
+            margin-bottom:15px;
+
+        }
+
+        .reason{
+
+            display:none;
+
+            font-size:18px;
+
+            line-height:1.8;
+
+        }
+
+        .card.open{
+
+            background:#ff2d75;
+
+        }
+
+        .card.open .reason{
+
+            display:block;
+
+        }
+
+        .card.open .tap{
+
+            display:none;
+
+        }
+
+        .button-area{
+
+            text-align:center;
+
+            margin:60px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="hearts">
+
+<span>❤️</span>
+<span>💕</span>
+<span>💖</span>
+<span>💗</span>
+<span>💝</span>
+
+</div>
+
+<h1 class="page-title">
+
+Some Reasons Why I Love You ❤️
+
+</h1>
+
+<p class="subtitle">
+
+Click each card to discover another reason...
+
+</p>
+
+<div class="cards">
+
+<div class="card" onclick="openCard(this)">
+<div class="number">1 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because your smile brightens my darkest days.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">2 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you always believe in me.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">3 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because your kindness makes you special.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">4 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you make every moment unforgettable.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">5 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because I feel safe with you.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">6 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you always know how to make me laugh.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">7 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you love me just as I am.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">8 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because your eyes love me more.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">9 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because your hugs feel like home.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">10 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you inspire me to become a better person.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">11 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because distance can never change our love.</div>
+</div>
+
+<div class="card" onclick="openCard(this)">
+<div class="number">12 ❤️</div>
+<div class="tap">Click Me</div>
+<div class="reason">Because you are my forever and always.</div>
+</div>
+
+</div>
+
+<div class="button-area">
+
+<a href="letter.html">
+
+<button class="startBtn">
+
+💌 Read My Love Letter →
+
+</button>
+
+</a>
+
+</div>
+
+<script src="js/main.js"></script>
+
+<script>
+
+function openCard(card){
+
+    card.classList.toggle("open");
+
+}
+
+</script>
+
+</body>
+
+</html>
